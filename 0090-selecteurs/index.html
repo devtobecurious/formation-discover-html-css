@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roar !</title>
+
+    <link rel="stylesheet" href="site.css">
+
+    <style>
+        div.child-selector div:first-child {
+            color: white;
+            background-color:green;
+        }
+
+        div.child-selector div:nth-child(2) {
+            color: white;
+            background-color:blue;
+        }
+
+        div.child-selector div:last-child {
+            color: white;
+            background-color: red;
+        }
+
+        div.regular-selector a[title] {
+            color: yellow;
+        }
+
+        div.regular-selector a[title^="woo"] {
+            background-color: royalblue;
+        }
+
+        div.regular-selector a {
+            display: block;
+        }
+
+        div.regular-selector a[title$="jedi"] {
+            background-color: green;
+        }
+
+        div.regular-selector div[data-info~="anakin"] {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="child-selector">
+        <div>
+            <div>
+                1
+            </div>
+            <div>
+                1
+            </div>
+            <div>
+                1
+            </div>
+        </div>
+    </div>
+
+    <div class="regular-selector">
+        <a title="wookie">Wookie ?</a>  
+        <a title="the last jedi">Jedi</a>  
+        <div data-info="anakin leia luke">Skywalker 1</div>
+        <div data-info="anakin">Skywalker 2</div>
+        <div data-info="leia">Skywalker 3</div>
+    </div>
+
+</body>
+
+</html>

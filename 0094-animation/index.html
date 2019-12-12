@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roar !</title>
+
+    <link rel="stylesheet" href="site.css">
+
+    <style>
+        div.animate {
+            animation-name: test1;
+            /* rien ne se passe ici, si pas de durée */
+            animation-duration: 2s;
+            /* animation-delay: 10s; */
+            /* à partir de quand ça se declenche */
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out; /* gestion acceleration */
+            /* durée infinie */
+            width: 200px;
+            position: absolute;
+        }
+
+        div.color {
+            animation-name: test2;
+            animation-duration: 10s;
+            position:static;
+        }
+
+        /* Ordre pas important */
+        @keyframes test1 {
+            from {
+                transform: translateX(200px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes test2 {
+            0% {
+                color: blue;
+            }
+
+            80% {
+                color: red;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animate" style="border: 1px solid red">
+        coucou
+    </div>
+    <div class="color">
+        hey !
+    </div>
+</body>
+
+</html>
